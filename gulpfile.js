@@ -17,8 +17,9 @@ gulp.task('browser-sync', function() {
 		server: {
 			baseDir: 'app'
 		},
+		browser: 'chrome',
 		notify: false,
-		// open: false,
+		open: false,
 		// tunnel: true,
 		// tunnel: "projectname", //Demonstration page: http://projectname.localtunnel.me
 	})
