@@ -8,14 +8,81 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+	header
+		.page-title
+			font-size: 98px
+			span
+				font-size: 24px
+				bottom: -45px
+	.nav-line, .nav-pills .nav-link, nav
+		height: 44px
+	.nav-pills .nav-link
+		font-size: 16px
+	section 
+		padding: 60px 0
+	.section-title
+		font-size: 28px					
+	.card-row
+		.card
+			width: 140px
+			height: 140px
+			font-size: 16px
+			img 
+				margin-bottom: 10px
+	p, ul, li 
+		font-size: 16px
+		font-weight: 500
+	.ghost-btn, .s-btn
+		font-size: 14px
 
+	.large-btn-wrapper
+		margin: 40px 0				
 // ≥768px
 +media-breakpoint-down(sm)
-
+	.card-col
+		margin-bottom: 20px
+	.nav-line
+		height: 88px
+	.nav-pills .nav-link
+		font-size: 16px
+		border: none
+		&:nth-child(1)
+			border: none	
+	header
+		.page-title
+			font-size: 60px
+			span
+				font-size: 24px
+				bottom: -45px
+	.card-row
+		.card
+			width: 100px
+			height: 100px
+	.g-btn-wrapper 						
+		margin-bottom: 20px
 // ≥576px
 +media-breakpoint-down(xs)
-
-
+	
+	.nav-line
+		height: auto
+	.nav
+		flex-direction: column
+		flex-wrap: nowrap
+		background-color: $text
+		height: auto
+	.card-row
+		.card
+			p
+				font-size: 14px
+	.form-row
+		form
+			height: 150px
+			.text-area
+				height: 150px
+		.ghost-btn
+			margin-bottom: 20px
+		.notif
+			margin-bottom: 20px	
 /*==========  Mobile First  ==========*/
 
 // ≤576px
