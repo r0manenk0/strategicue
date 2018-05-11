@@ -17,6 +17,7 @@ body
 	font-family: $default-font
 	overflow-x: hidden !important
 	color: $text
+	background-color: #EAEAEA
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -39,7 +40,7 @@ body
 	display: flex
 	align-items: center
 	justify-content: center
-	margin: 60px 0
+	margin-top: 20px
 
 a 
 	text-decoration: none
@@ -48,18 +49,19 @@ a
 		color: #fff
 
 ol
-	padding-left: 20px
+	padding-left: 16px
 p, ul, li 
-	font-size: 18px
+	font-size: 16px
 	font-weight: 500	
 
 b, strong
 	font-weight: bold
 
 header
-	background: url(../img/header_bg.jpg) no-repeat	
+	background: url(../img/bann.png) no-repeat	
 	background-size: cover
-	height: 200px
+	width: 100%
+	height: auto
 	z-index: 1
 	.page-title
 		position: relative
@@ -72,24 +74,38 @@ header
 			position: absolute
 			bottom: -2px
 			right: 2px
+.nav-container
+	padding: 0
+	.nav-content
+		font-size: 24px
 .nav-line
-	background-color: $text
+	background-color: #fff
 	height: 45px
+	padding: 0
 .nav-pills .nav-link
 	border-radius: 0
 	height: 45px
 	color: #fff
-	font-size: 18px
+	padding: 0.6rem
+	font-size: 14px
 	font-weight: 400
 	border-right: 2px rgba($lgray, 0.2) solid
+	img 
+		transition: all 0.2s ease-in-out
 	&:nth-child(1)
 		border-left: 2px rgba($lgray, 0.1) solid
+
 #orange
 	.nav-pills .nav-link.active,.nav-pills .show>.nav-link
 		background-color: $orange
 	.nav-pills .nav-link
 		&:hover
 			background-color: $orange
+		&:last-child()
+			&:hover
+				background-color: rgba(255, 255, 255, 0.1)
+				img
+					transform: rotate(90deg)
 	.s-btn
 		&:hover
 			background-color: $orange
@@ -103,6 +119,11 @@ header
 	.nav-pills .nav-link
 		&:hover
 			background-color: $violet
+		&:last-child()
+			&:hover
+				background-color: rgba(255, 255, 255, 0.1)
+				img
+					transform: rotate(90deg)	
 	.s-btn
 		&:hover
 			background-color: $violet
@@ -116,6 +137,11 @@ header
 	.nav-pills .nav-link
 		&:hover
 			background-color: $green
+		&:last-child()
+			&:hover
+				background-color: rgba(255, 255, 255, 0.1)
+				img
+					transform: rotate(90deg)	
 	.s-btn
 		&:hover
 			background-color: $green
@@ -125,7 +151,7 @@ header
 			background-color: rgba($green, 0.9)													
 
 nav
-	background-color: #000
+	background-color: $text
 	font-weight: 600
 	font-size: 24px	
 	color: #fff
@@ -137,23 +163,27 @@ nav
 	p
 		margin-bottom: 0
 .txt
-	padding-top: 60px
-section
-	padding: 80px 0
-	&.bg-gray
-		background-color: #EAEAEA
-	&.bg-white
-		background-color: #fff
-	&.l-btn-section
-		margin: 20px 0
-		padding: 0						
+	padding-top: 70px
+	background-color: #fff
+
+.bg-gray
+	background-color: #EAEAEA
+	padding: 70px 0
+.bg-white
+	background-color: #fff
+	padding: 60px 0
+.l-btn-section
+	margin: 20px 0
+	padding: 0						
 .section-title
 	font-size: 32px
+	line-height: 32px
 	margin-bottom: 30px
 /*section.bg-gray
 	background-color: #EAEAEA*/
 
-
+.home-description
+	padding: 0 40px
 .card-row 
 	padding: 0
 	margin: 0
@@ -191,7 +221,7 @@ section
 			justify-content: center
 		img
 			margin-bottom: 15px
-			transition: all 0.2s ease-in-out
+			transition: all 0.2s cubic-bezier(0,.62,.92,.92)
 		&:before
 			content: ''
 			float: left
@@ -201,25 +231,25 @@ section
 			&:hover
 				background-color: rgba($blue, 0.9)
 				img
-					transform: translateY(-3px)
+					transform: translateY(3px)
 		&.orange
 			background-color: $orange
 			&:hover
 				background-color: rgba($orange, 0.9)
 				img
-					transform: translateY(-3px)
+					transform: translateY(3px)
 		&.violet
 			background-color: $violet
 			&:hover
 				background-color: rgba($violet, 0.9)
 				img
-					transform: translateY(-3px)
+					transform: translateY(3px)
 		&.green
 			background-color: $green
 			&:hover
 				background-color: rgba($green, 0.9)
 				img
-					transform: translateY(-3px)	
+					transform: translateY(3px)	
 
 
 	
@@ -309,6 +339,314 @@ section
 			font-size: 16px
 			margin-bottom: 0	
 
+.fixed-top
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	z-index: 1030
+.close-btn
+	position: absolute
+	width: 136px
+	height: 48px
+	display: block
+	top: 0px
+	right: 0
+	background-color: #000
+	text-align: center
+	padding: 12px 0px
+	text-transform: uppercase
+	font-size: 12px
+	font-weight: 600
+	letter-spacing: 0.2rem
+	a
+		color: #fff
+		transition: all .2s ease-in-out;
+		img
+			transition: all .2s ease-in-out;
+		&:hover
+			img
+				transform: rotate(90deg)
+.presentation
+	height: 100vh
+	background-color: #000
+	background-image: none
+	position: relative
+	.header
+		height: 100vh
+		.white-border
+			border: 2px solid #fff
+			padding: 8px
+			width: auto
+			height: 100%
+			margin: 0 auto
+			.img-block
+				img
+					position: relative
+				span
+					position: absolute
+					bottom: 0
+					left: 0
+					color: #fff
+					font-size: 10px
+					font-weight: 500
+					padding: 2px 5px
+			.title-block
+				position: relative
+				.composition-title
+					padding: 30px
+					color: #fff
+					display: flex
+					flex-direction: column
+					justify-content: center
+					height: 540px
+					img
+						position: absolute
+						top: 0
+						right: 0
+					h1 
+						font-size: 34px
+						line-height: 2.8rem
 
+					.pre-title
+						font-size: 12px
+						letter-spacing: 4px
+						margin-bottom: 20px
+						display: block
+					.post-title
+						position: absolute
+						bottom: 60px	
+						line-height: 18px
+						font-size: 15px
+						font-weight: 400
+						&:before
+							content: ""
+							position: absolute
+							height: 1px
+							border-top: 1px solid white
+							top: -12px
+							width: 235px
+#dark-bg-img
+	opacity: 0
+	transition: all 2s ease-in
+	&.fade-in
+		opacity: 1
+
+.scroll-btn
+	position: absolute
+	bottom: 50px
+	left: 50%							
+
+#presentation
+	.text-col
+		padding: 15px 24px
+		p 
+			font-size: 15px
+			font-weight: 500
+			text-align: justify
+			line-height: 1.4rem
+		.digit-txt
+			background-color: #fff
+			padding: 40px			
+			.digit-txt-content
+				display: flex
+				flex-direction: column
+				align-items: center
+				justify-ontent: center
+				&:first-child()
+					border-right: 1px solid rgba($text, 0.2)
+				p 
+					font-size: 32px
+					font-weight: 200
+					letter-spacing: 1.4px
+					color: #2d2d2d	!important
+				span
+					font-size: 10px	
+	h2 
+		padding: 0 8px	
+	.proposer
+		background-color: #fff
+		font-weight: 600
+		opacity: 0
+		transform: translateX(50px)
+		transition: all 0.6s ease-in
+		&.slide-in
+			transform: translateX(0)
+			opacity: 1	
+		p
+			font-size: 24px	
+			font-weight: 600
+			line-height: 32px
+			padding: 40px 30px
+	.dark-bg
+		background-color: #000
+		color: #fff
+		padding: 90px 0
+		img 
+			position: relative
+		.img-txt
+			position: absolute
+			bottom: 20px
+			left: 30px
+			font-size: 10px	
+		h2
+			font-size: 38px
+			text-align: center	
+	.white-bg
+		background-color: #fff
+	.gray-bg, .white-bg, .dark-gray
+		padding: 90px 0	
+	.parallax
+		background: no-repeat
+		background-size: 120%
+		position: relative
+		width: 100%
+		height: 500px
+		z-index: 1
+		overflow: hidden 
+		.prlx1 
+			background: url(../img/pres3.jpg) no-repeat
+			background-size: cover
+			position: absolute
+			width: 100%
+			height: 200%
+		.text-col
+			padding: 0 25px			
+		.img-text
+			font-size: 10px
+			color: #fff
+	.small-image
+		position: relative
+		.img-text
+			font-size: 10px
+			color: #fff
+			position: absolute
+			top: 6px
+			left: 10px
+	.dark-gray
+		background-color: #383838
+		color: #fff		
+	.parallax2
+		background: no-repeat
+		background-size: 100%
+		position: relative
+		width: 100%
+		height: 100%
+		z-index: 1
+		overflow: hidden
+		.prlx-overlay
+			content: ''
+			width: 100%
+			height: 100%
+			background-color: #383838
+			position: absolute
+			z-index: 2	
+		.prlx2
+			background: url(../img/pres6.jpg) no-repeat
+			background-size: contain
+			position: absolute
+			width: 100%
+			height: 100%
+		.img-text
+			color: #fff
+			position: relative
+			font-size: 10px
+			z-index: 3
+				
+		.after-p2
+			z-index: 3
+			position: relative
+			color: #fff	
+			margin-top: 600px
+			padding-top: 90px 	
+			padding-bottom: 90px
+	.parallax3
+		background: no-repeat
+		background-size: 120%
+		position: relative
+		width: 100%
+		height: 550px
+		z-index: 1
+		overflow: hidden 
+		.prlx2 
+			background: url(../img/pres7.jpg) no-repeat
+			background-size: cover
+			background-position: 50% 35%
+			position: absolute
+			width: 100%
+			height: 100%
+		.img-text
+			font-size: 10px
+			color: #fff	
+	.chanel-link
+		background-color: #7F7F7F
+		position: relative
+		img
+			position: absolute
+			top: 45%
+			left: 45%	
+	.text-col .txt-under-video
+		font-size: 14px
+		line-height: 18px
+		margin-top: 25px
+	.pres-end-close
+		background-color: #000
+		color: #fff
+		padding: 16px 90px
+		text-transform: uppercase
+		font-size: 12px
+		font-weight: 600
+		letter-spacing: 0.2rem
+		transition: all .2s ease-in-out;
+		img
+			transition: all .2s ease-in-out;
+		&:hover
+			background-color: #3e3e3e
+			img
+				transform: rotate(90deg)	
+
+#tooltip 
+	position: relative
+	display: inline-block
+	img
+		cursor: pointer
+	.tooltiptext
+		visibility: hidden
+		min-width: 320px
+		min-height: 50px
+		background-color: #fff
+		color: $text
+		text-align: left
+		padding: 20px 30px
+		position: absolute
+		font-size: 13px
+		top: -90px
+		left: -150px
+		z-index: 4
+		opacity: 0
+		transition: visibility 0s linear 0.2s, opacity 0.2s linear
+		a
+			text-decoration: underline 
+			&:hover
+				color: $blue
+
+	&:hover
+		.tooltiptext
+			visibility: visible
+			opacity: 1
+			transition-delay: 0.1s
+			box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.18), 0 -1px 0 0px rgba(0, 0, 0, 0.03)
+	
+			
+
+
+
+
+
+
+
+
+										 	
+	
 
 @import "media" // Always at the end

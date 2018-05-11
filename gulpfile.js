@@ -38,6 +38,11 @@ gulp.task('styles', function() {
 gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/gsap/src/uncompressed/TweenMax.js',
+		'app/libs/gsap/src/uncompressed/plugins/ScrollToPlugin.js',
+		'app/libs/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js',
+		'app/libs/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js',
+		'app/libs/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
