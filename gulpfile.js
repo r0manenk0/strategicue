@@ -74,6 +74,7 @@ gulp.task('watch', ['styles', 'js', 'browser-sync'], function() {
 	gulp.watch('app/orange/*.html', browsersync.reload);
 	gulp.watch('app/violet/*.html', browsersync.reload);
 	gulp.watch('app/green/*.html', browsersync.reload);
+	gulp.watch('app/blue/*.html', browsersync.reload);
 });
 
 gulp.task('default', ['watch']);
