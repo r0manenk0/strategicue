@@ -502,12 +502,7 @@ nav
 		color: #fff
 		padding: 90px 0
 		img 
-			position: relative
-		.img-txt
-			position: absolute
-			bottom: 20px
-			left: 30px
-			font-size: 10px	
+			position: relative		
 		h2
 			font-size: 38px
 			text-align: center	
@@ -623,6 +618,21 @@ nav
 			background-color: #3e3e3e
 			img
 				transform: rotate(90deg)	
+
+.img-txt
+	position: absolute
+	bottom: 20px
+	left: 30px
+	font-size: 10px
+	color: #fff
+	a 
+		color: #fff
+		text-decoration: underline
+
+.on-h-img
+	transition: all .3s ease-in-out
+	&:hover
+		transform: scale(1.5)
 
 #tooltip 
 	position: relative
