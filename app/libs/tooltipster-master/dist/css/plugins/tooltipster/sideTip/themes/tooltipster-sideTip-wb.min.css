@@ -1,11 +1,11 @@
 .tooltipster-sidetip.tooltipster-wb .tooltipster-box {
-    border-radius: 3px;
-    border: 1px solid #ccc;
-    background: #ededed
+    border-radius: 0px;
+    border: none;
+    background: #fff
 }
 
 .tooltipster-sidetip.tooltipster-wb .tooltipster-content {
-    color: #e5e5e5
+    color: #282828
 }
 
 .tooltipster-sidetip.tooltipster-wb .tooltipster-arrow {

@@ -68,6 +68,16 @@ $(document).ready(function() {
 		contentAsHTML: true,
 		arrow: false,
 		maxWidth: 320,
+		theme: 'tooltipster-wb',
+		position: 'top',
+		interactive: true
+	})
+	$('.wttip').tooltipster({
+		trigger: 'hover',
+		contentAsHTML: true,
+		arrow: false,
+		maxWidth: 320,
+		theme: 'tooltipster-gb',
 		position: 'top',
 		interactive: true
 	})
