@@ -9,7 +9,7 @@
 	.presentation .header .white-border .title-block .composition-title
 		height: 494px
 	.presentation .header .white-border .title-block .composition-title img
-		top: -5px
+		top: -30px
 	.presentation .header .white-border .title-block .composition-title h1 
 		font-size: 28px
 		line-height: 2.4rem	
@@ -23,7 +23,7 @@
 	.presentation .header .white-border .title-block .composition-title
 		height: 360px
 	.presentation .header .white-border .title-block .composition-title img
-		top: -5px
+		top: -90px
 	.presentation .header .white-border .title-block .composition-title h1 
 		font-size: 24px
 		line-height: 1.8rem	
@@ -34,7 +34,8 @@
 	.nav-line, .nav-pills .nav-link, nav
 		height: 44px
 	.nav-pills .nav-link
-		font-size: 16px
+		font-size: 14px
+		padding: 10px 5px		
 	section 
 		padding: 60px 0
 	.section-title
@@ -45,6 +46,7 @@
 			height: 140px
 			font-size: 16px
 			line-height: 16px
+			min-height: auto
 			img 
 				margin-bottom: 10px
 	p, ul, li 
@@ -61,12 +63,20 @@
 			width: 20px					
 // ≥768px
 +media-breakpoint-down(sm)
+	.presentation .header .white-border .title-block .composition-title img
+		top: -10px
+	.nav-container .nav-content
+		font-size: 18px
 	.card-col
 		margin-bottom: 20px
 	.nav-line
 		height: 88px
 	.nav-pills .nav-link
-		font-size: 16px
+		font-size: 14px
+		line-height: 14px
+		display: flex
+		align-items: center
+		justify-content: center
 		border: none
 		&:nth-child(1)
 			border: none	
@@ -76,14 +86,79 @@
 			span
 				font-size: 24px
 				bottom: 20px
+	
 	.card-row
 		.card
 			width: 100px
 			height: 100px
+		.card-in-line
+			width: 150px
+			height: 150px	
 	.g-btn-wrapper 						
 		margin-bottom: 20px
 // ≥576px
 +media-breakpoint-down(xs)
+	#presentation .text-col .small-t .icon-table td
+		padding: 15px
+	#presentation .text-col .small-t
+		padding: 0	
+	img.ttip.tooltipstered
+		margin: 5px
+	#presentation .parallax2 .after-p2
+		margin-top: 100px
+	#presentation .parallax .img-text, #presentation .parallax3 .img-text
+		line-height: 1.1
+		display: block
+		margin-top: 10px
+	.img-txt
+		left: 10px
+	#presentation .dark-bg h2
+		font-size: 28px
+	#presentation .text-col .digit-txt .digit-txt-content:first-child
+		border: none
+		margin-bottom: 30px
+	#presentation h2
+		padding-left: 0
+	.txt
+		padding-top: 40px
+	.presentation
+		height: calc(100vh - 50px)
+		.header
+			height: calc(100vh - 50px)
+	.scroll-btn
+		left: 49%		
+	#presentation .text-col 
+    	padding: 15px 5px
+	.large-btn
+		font-size: 12px
+		height: 60px
+	.nav-pills .nav-link
+		font-size: 16px
+		padding: 20px 5px
+	#main
+		.card-row
+			flex-direction: row
+			.card
+				height: calc((100vw / 2) - 20px)
+	.card-row 
+		flex-direction: column
+		.card-in-line
+			width: 60%
+			height: auto
+			margin: 15px
+		.card
+			width: 50%
+			height: calc((100vw / 2) - 20px) 	
+	.large-btn-wrapper
+		margin: 0		
+	section
+		padding: 0
+	.bg-gray, .bg-white
+		padding: 50px 20px
+	.quiz
+		margin-top: 30px	
+	.nav-container .nav-content
+		font-size: 16px
 	.img-txt
 		font-size: 8px
 	.nav-line
