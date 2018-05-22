@@ -8,7 +8,7 @@ $(document).ready(function() {
 		$(".p2").slideToggle(600);
 	});
 	var controller = new ScrollMagic.Controller();
-	
+
 	if ($('.parallax').length) {
 	var slideParallaxScene = new ScrollMagic.Scene({
 		triggerElement: '.parallax',
@@ -38,12 +38,12 @@ $(document).ready(function() {
 
 
 	var overlayImage = new TimelineMax();
-	
-	overlayImage.set('.prlx-overlay', {autoAlpha: 0.2}) 
+
+	overlayImage.set('.prlx-overlay', {autoAlpha: 0.2})
 				.to('.prlx-overlay', 1, {autoAlpha: 1, ease:Linear.easeNone})
 
-	
-	if ($('.parallax2').length) {			
+
+	if ($('.parallax2').length) {
 	var slideParallaxScene1 = new ScrollMagic.Scene({
 		triggerElement: '.parallax2',
 		triggerHook: 1,
@@ -105,6 +105,28 @@ $(document).ready(function() {
 		position: 'bottom',
 		interactive: true
 	});
+
+//video popup
+$('#chanel-link').magnificPopup({
+    delegate: 'a',
+    type: 'inline',
+    callbacks: {
+        open: function() {
+
+            $('html').css('margin-right', 0);
+
+            // Play video on open:
+            $(this.content).find('video')[0].play();
+
+        },
+        close: function() {
+
+            // Reset video on close:
+            $(this.content).find('video')[0].load();
+
+        }
+    }
+});
 
 
 });

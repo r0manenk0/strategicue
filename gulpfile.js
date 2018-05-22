@@ -44,6 +44,7 @@ gulp.task('js', function() {
 		'app/libs/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js',
 		'app/libs/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js',
 		'app/libs/tooltipster-master/dist/js/tooltipster.bundle.min.js',
+		'app/libs/videoPopup/jquery.popVideo.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
